@@ -13,12 +13,14 @@ double vvod (string text)
 
 string rezult (double x1, double y1, double x2, double y2, string text)
 {
-  string text1 = new string("Прямые совпадают");
-  string text2 = new string("Прямые параллельны");
-  string text3 = new string($"Прямые пересекаются в точке с координатами X = {(y2-y1) / (x1-x2)} и Y = {(x2 * y1 - x1 * y2) / (x2 - x1)}");
-  if ((x1 == x2) & (y1 == y2)) text = text1;
-  else if (x1 == x2) text = text2;
-  else text = text3;
+  string text1 = new string("Одна или обе функции являются точками, а не прямыми");
+  string text2 = new string("Прямые совпадают");
+  string text3 = new string("Прямые параллельны");
+  string text4 = new string($"Прямые пересекаются в точке с координатами X = {(y2-y1) / (x1-x2)} и Y = {(x2 * y1 - x1 * y2) / (x2 - x1)}");
+  if (x1 == 0 || x2 == 0) text = text1;
+  else if ((x1 == x2) & (y1 == y2)) text = text2;
+  else if (x1 == x2) text = text3;
+  else text = text4;
 return text;
 }
 
