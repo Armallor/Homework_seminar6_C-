@@ -3,15 +3,15 @@
 
 // Метод ввода значений
 
-int vvod (string text)
+double vvod (string text)
 {
   Console.Write(text);
-  return Convert.ToInt32(Console.ReadLine()!);
+  return Convert.ToDouble(Console.ReadLine()!);
 }
 
 // Метод определения координат точек пересечения
 
-string rezult (int x1, int y1, int x2, int y2, string text)
+string rezult (double x1, double y1, double x2, double y2, string text)
 {
   string text1 = new string("Прямые совпадают");
   string text2 = new string("Прямые параллельны");
@@ -24,10 +24,10 @@ return text;
 
 // Основные действия
 
-int k1 = vvod("Введите значение коэффициента k1 ");
-int b1 = vvod("Введите значение коэффициента b1 ");
-int k2 = vvod("Введите значение коэффициента k2 ");
-int b2 = vvod("Введите значение коэффициента b2 ");
+double k1 = vvod("Введите значение коэффициента k1 ");
+double b1 = vvod("Введите значение коэффициента b1 ");
+double k2 = vvod("Введите значение коэффициента k2 ");
+double b2 = vvod("Введите значение коэффициента b2 ");
 
 string notext = new string("");
 
